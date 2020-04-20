@@ -1,6 +1,6 @@
 Ubuntu Golden Image
 
-"Ubuntu 18.04.3 LTS"		# cat /etc/lsb-release 					# Updated=22-August-2019 (CBD edition)
+"Ubuntu 18.04.3 LTS"		# cat /etc/lsb-release 					# Updated=20-April-2020
 
 # Updating to latest Ubuntu point release
 sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y
@@ -16,7 +16,7 @@ sudo visudo
 	Defaults        env_reset, timestamp_timeout=60
 
 # Install usefull tools
-sudo apt-get install  -y imagemagick tasksel net-tools htop nano yum-utils wget rsync git ncdu nload ranger iotop mdadm unzip iperf3 mlocate tree p7zip p7zip-full  p7zip-rar glances curl unzip zip -y
+sudo apt-get install  -y imagemagick tasksel net-tools htop nano yum-utils wget rsync git ncdu nload ranger iotop mdadm unzip iperf3 mlocate tree p7zip p7zip-full  p7zip-rar glances curl unzip zip woof -y
 sudo timedatectl set-timezone Asia/Amman
 
 # Install LAMP Stack
