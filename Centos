@@ -1,0 +1,20 @@
+# Updating to latest Centos point release
+
+sudo yum update -y 
+sudo reboot
+package-cleanup -q --leaves | xargs -l1 yum -y remove 
+
+# Increase sudo timeout to 60 mins, instead of nagging every 5 mins for password
+sudo visudo
+	Change 
+	Defaults        env_reset
+	To
+	Defaults        env_reset, timestamp_timeout=60
+
+# Install usefull tools
+yum install -y ImageMagick htop nano net-tools epel-release nano yum-utils wget rsync git ncdu nload make iotop unzip iperf3 mlocate tree p7zip glances curl unzip zip 
+wget http://www.home.unix-ag.org/simon/woof
+sudo cp woof /usr/bin/
+chmod 777 /usr/bin/woof 
+rm -rf woof 
+sudo timedatectl set-timezone Asia/Amman
