@@ -12,7 +12,8 @@ sudo visudo
 	Defaults        env_reset, timestamp_timeout=60
 
 # Install usefull tools
-yum install -y epel-release ImageMagick htop nano net-tools nano yum-utils wget rsync git ncdu nload make iotop unzip iperf3 mlocate tree p7zip glances curl unzip zip yum-utils 
+yum install -y epel-release ImageMagick nano net-tools nano yum-utils wget rsync git make iotop unzip iperf3 mlocate tree curl zip
+yum install -y p7zip glances ncdu nload htop
 wget http://www.home.unix-ag.org/simon/woof
 sudo cp woof /usr/bin/
 chmod 777 /usr/bin/woof 
