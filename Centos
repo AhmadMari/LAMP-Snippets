@@ -66,6 +66,10 @@ sudo nano /etc/sysconfig/memcached
 # You can view Memcache Admin settings using a tool called Memcache Top:
 # wget https://github.com/eculver/memcache-top/archive/v0.7.zip
 
-#Create Swap File with capacity of 2GB
-sysctl vm.swappiness=2
-sudo sysctl -p
+#Create Swap File with capacity of 8GB
+
+sudo dd if=/dev/zero of=/swap count=8192 bs=1MiB
+sudo chmod 600 /swap
+sudo mkswap /swap
+sudo swapon /swap
+free -m
